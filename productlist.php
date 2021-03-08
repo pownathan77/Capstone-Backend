@@ -3,12 +3,12 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$username = 'root'
-$password = 'Panther$'
-$databasename = 'ecommerce'
+$username = 'root';
+$password = 'Panther$';
+$databasename = 'ecommerce';
 $con=mysqli_connect("localhost",$username,$password,$databaseName);
 
-$query = "SELECT title, price FROM 'Product';
+$query = "SELECT title, price FROM 'Product'";
 $sqlsearch = mysqli_query($con, $query);
 $resultcount = mysqli_numrows($sqlsearch);
 
