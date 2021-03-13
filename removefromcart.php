@@ -9,8 +9,7 @@ $databasename = 'ecommerce';
 $con=mysqli_connect("localhost",$username,$password,$databaseName);
 
 $query = remove_from_cart(productid, accountid);
-$sqlsearch = mysqli_query($con, $query);
-$resultcount = mysqli_numrows($sqlsearch);
+$sqlsearch = $con->query($query) or die($con->error);
 
 $rows = array();
   while($r = mysqli_fetch_assoc($sqlsearch)) {
