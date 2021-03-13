@@ -8,7 +8,7 @@ $password = 'Panther$';
 $databasename = 'ecommerce';
 $con=mysqli_connect("localhost",$username,$password,$databaseName);
 
-$query = "SELECT title, price FROM Product";
+$query = check_login_info(accountid);
 $sqlsearch = $con->query($query) or die($con->error);
 
 $rows = array();
