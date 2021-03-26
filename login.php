@@ -21,6 +21,6 @@ $rows = array();
 
 header('Content-type: application/json');
 header('Access-Control-Allow-Origin: *');
-
+header('Access-Control-Allow-Methods: GET, HEAD');
 print json_encode($rows);
 ?>
