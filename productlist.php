@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 $username = 'root';
 $password = 'Panther$';
-$databasename = 'ecommerce';
+$databaseName = 'ecommerce';
 $con=mysqli_connect("localhost",$username,$password,$databaseName);
 
 $query = "SELECT title, price FROM Product";
@@ -21,3 +21,4 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, HEAD');
 print json_encode($rows);
 ?>
+
