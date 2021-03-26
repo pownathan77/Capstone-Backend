@@ -11,7 +11,7 @@ $password = 'Panther$';
 $databasename = 'ecommerce';
 $con=mysqli_connect("localhost",$username,$password,$databaseName);
 
-$call = "CALL usp_GetLoginInfo('".$email."', '".$userpassword."');"
+$query = "CALL usp_GetLoginInfo('".$email."', '".$userpassword."')";
 $sqlsearch = $con->query($query) or die($con->error);
 
 $rows = array();
