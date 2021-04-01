@@ -3,15 +3,14 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$email = json_decode($_POST["email"], FALSE);
-$userpassword = json_decode($_POST["userPassword"], FALSE);
+$data = json_decode($_POST[]);
 
 $username = 'root';
 $password = 'Panther$';
 $databaseName = 'ecommerce';
 $con=mysqli_connect("localhost",$username,$password,$databaseName);
 
-$query = "CALL usp_GetLoginInfo('".$email."', '".$userpassword."')";
+$query = "CALL usp_GetLoginInfo('".$data->email."', '".$data->userPassword."')";
 $sqlsearch = $con->query($query) or die($con->error);
 
 $rows = array();
